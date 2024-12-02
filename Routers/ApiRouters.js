@@ -3,6 +3,8 @@ import { posts } from "../ApiData/Post.js";
 import { comments } from "../ApiData/comments.js";
 import { album } from "../ApiData/album.js";
 import { photo } from "../ApiData/photo.js";
+import { user } from "../ApiData/user.js";
+import { todos } from "../ApiData/todos.js";
 
 const ApiRouters = express.Router();
 ApiRouters.get("/posts", (req, res) => {
