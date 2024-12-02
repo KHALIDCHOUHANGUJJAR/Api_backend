@@ -9,13 +9,13 @@ const PORT = process.env.PORT;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => {
-  res.status(200).send("Welcome to JsonApi");
-});
-app.use("/posts", ApiRouters);
+app.use("/", ApiRouters);
+
+
 app.use((req, res) => {
   res.status(404).send("404 Page Not Found");
 });
+
 app.listen(PORT, () => {
   console.log(`Server Running at http://localhost:${PORT}`);
 });
